@@ -8,12 +8,15 @@
     "bootstrap": "^4.1.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts": "2.0.4"
+    "react-scripts": "2.0.4",
+    "env-cmd": "^10.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "env-cmd -e development -r .env-cmdrc react-scripts start",
+    "build_dev": "env-cmd -e development -r .env-cmdrc react-scripts --max_old_space_size=4096 build",
+    "build_staging": "env-cmd -e test -r .env-cmdrc react-scripts --max_old_space_size=4096 build",
+    "build_master": "env-cmd -e production -r .env-cmdrc react-scripts --max_old_space_size=4096 build",
+    "test": "env-cmd -e test -r .env-cmdrc react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
