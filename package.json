@@ -16,6 +16,7 @@
     "build_dev": "env-cmd -e development -r .env-cmdrc react-scripts --max_old_space_size=4096 build",
     "build_staging": "env-cmd -e test -r .env-cmdrc react-scripts --max_old_space_size=4096 build",
     "build_master": "env-cmd -e production -r .env-cmdrc react-scripts --max_old_space_size=4096 build",
+    "build": "react-scripts build",
     "test": "env-cmd -e test -r .env-cmdrc react-scripts test",
     "eject": "react-scripts eject"
   },
