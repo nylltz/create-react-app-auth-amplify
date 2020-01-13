@@ -13,6 +13,7 @@
   },
   "scripts": {
     "start": "env-cmd -e development -r .env-cmdrc react-scripts start",
+    "build_feature": "env-cmd -e feature -r .env-cmdrc react-scripts --max_old_space_size=4096 build",
     "build_dev": "env-cmd -e development -r .env-cmdrc react-scripts --max_old_space_size=4096 build",
     "build_staging": "env-cmd -e test -r .env-cmdrc react-scripts --max_old_space_size=4096 build",
     "build_master": "env-cmd -e production -r .env-cmdrc react-scripts --max_old_space_size=4096 build",
